@@ -14,10 +14,30 @@ brew install kafka
 zkServer start
 ```
 
+## Остановка zookeeper
+
+```bash
+zkServer stop
+```
+
 ## Запуск сервера Kafka
 
 ```bash
 /usr/local/bin/kafka-server-start /usr/local/etc/kafka/server.properties
+```
+
+## Остановка сервера Kafka
+
+```bash
+/usr/local/bin/kafka-server-stop
+```
+
+## Kafka через docker-compose
+Описанных выше действий можно избежать и воспользоваться docker и docker-compose.
+Пример yaml файла `src/main/resources/docker-compose.yml`. Запуск производится с помощью команды docker-compose:
+
+```bash
+ docker-compose -f resources/docker-compose.yml up
 ```
 
 ## Создание топика Kafka
